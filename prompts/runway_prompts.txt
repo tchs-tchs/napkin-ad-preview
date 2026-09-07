@@ -1,0 +1,11 @@
+# Runway / Kaiber instructions
+
+Runway 推荐流程：
+1. 新建 Project -> 竖屏 9:16，30fps。
+2. 为每个镜头创建单独 clip，设置时长分别 2.5 / 3.0 / 3.0 / 1.5 秒。
+3. 把每个镜头的 prompt（参考 prompts/sd_prompts.txt）填入对应 clip 的文本输入。
+4. 上传 logo.png 到 Assets（不要放在 prompt 中），在 Hero clip 与 CTA clip 使用 overlay 保持清晰（position center, scale 20-30%）。
+5. 为 Hero clip 加 slow rotate（-6..+6）与轻微 dolly-in 动作；Macro clip 使用静帧或极小晃动；Lifestyle clip 使用 slight handheld motion；CTA clip 使用 scale pop 动效。
+6. 渲染并下载每个 clip，或让 Runway 输出单个合成视频。
+
+优点：Runway 可以直接输出 MP4，且 overlay 保证 logo 清晰。

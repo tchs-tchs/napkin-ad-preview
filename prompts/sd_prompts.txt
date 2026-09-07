@@ -1,0 +1,34 @@
+# Stable Diffusion (Automatic1111 / SDXL) prompts
+
+通用设置建议：
+- 纵向尺寸：1080x1920
+- Sampler: DPM++ 2M Karras
+- Steps: 28-40 (macro 用 32-40)
+- Guidance/CFG: 7.5-9
+- 使用 Real-ESRGAN 放大（如需）以及 GFPGAN 修复人脸
+
+统一 negative prompt:
+lowres, watermark, text, logo (unless provided), deformed, cartoon, extra limbs, oversaturated, jpeg_artifact, blurry, out_of_frame, bad_anatomy, hands_wrong
+
+镜头1 — Hero（img1.png）
+Prompt:
+"Cinematic studio hero shot of a premium eco-friendly napkin pack placed on a light wooden surface, soft warm window key light, minimal composition, shallow depth of field, visible fine paper texture, packaging front clearly visible (leave space on package front for logo overlay), warm beige color grading, photoreal, 50mm lens, vertical 9:16"
+Seed: 111111
+
+镜头2 — Macro（img2.png）
+Prompt:
+"Extreme macro close-up of napkin fiber texture absorbing a colored droplet instantly, finger pressing and rebounding slightly, ultra-detailed fiber structure, soft rim lighting, no logo, creamy warm tones, photoreal, vertical 9:16"
+Seed: 222222
+
+镜头3 — Lifestyle（img3.png）
+Prompt:
+"Cozy family dining scene, natural morning window light, candid moment: a person gently wiping a small spilled drink with a napkin, warm tones, shallow depth of field, small napkin pack visible on table edge (do not show logo clearly), photoreal, vertical 9:16"
+Seed: 333333
+
+镜头4 — CTA（img4.png）
+Prompt:
+"Minimal modern CTA card on warm beige background: centered clean area left for logo overlay, large clear Chinese text '扫码购买', QR code placeholder box, olive-beige accent, high contrast, clean typography, vertical 9:16, photoreal-graphic hybrid"
+Seed: 444444
+
+Inpainting（可选）:
+- 若想把真实 logo 放到包装正面：先生成无 logo 的 hero 图，使用 img2img 的 mask 模式在包装正面做 inpaint，prompt 中写："Place provided logo exactly at center of package, preserve logo colors and shape, do not distort"。denoising_strength 建议 0.2-0.35。

@@ -1,0 +1,17 @@
+# Midjourney (Discord) prompts
+
+参数说明：在 prompt 末尾加上 `--ar 9:16 --v 6 --q 2`（根据你使用的 MJ 版本调整）。
+
+镜头1 — Hero
+Cinematic hero shot of a premium eco napkin pack on a light wooden table, soft natural window light, shallow depth of field, warm beige color grading, minimal composition, packaging front visible (leave space for logo overlay) --ar 9:16 --v 6 --q 2
+
+镜头2 — Macro
+Extreme macro close-up of napkin fibers absorbing a droplet instantly, finger pressing with rebound, ultra-detailed photoreal --ar 9:16 --v 6 --q 2
+
+镜头3 — Lifestyle
+Cozy family dining table, candid moment wiping a small spill with napkin, warm morning light, photoreal --ar 9:16 --v 6 --q 2
+
+镜头4 — CTA
+Minimal CTA card on warm beige background with placeholder for logo and QR code, clean typography --ar 9:16 --v 6 --q 2
+
+注意：Midjourney 对 logo 的保真度有限，建议出图后用后期叠加真实 logo。
