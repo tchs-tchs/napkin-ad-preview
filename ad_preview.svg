@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <style type="text/css"><![CDATA[
+      .bg { fill: #F5EDE6; }
+      .table { fill: #F0E3D8; }
+      .panel { fill: #FFFFFF; stroke: #E6D8C8; stroke-width:6; rx:28; ry:28; }
+      .accent { fill: #9AA57A; }
+      .title { font-family: "Helvetica Neue", Helvetica, Arial, "Noto Sans SC", sans-serif; fill:#5A4A3E; font-weight:600; }
+      .subtitle { font-family: "Helvetica Neue", Helvetica, Arial, "Noto Sans SC", sans-serif; fill:#5A4A3E; }
+      .cta { font-family: "Helvetica Neue", Helvetica, Arial, "Noto Sans SC", sans-serif; fill:#9AA57A; font-weight:700; }
+      .logo-text { font-family: "Helvetica Neue", Helvetica, Arial, "Noto Sans SC", sans-serif; fill:#FFFFFF; font-weight:700; }
+      .qr { fill:#EDEDED; stroke:#CCCCCC; stroke-width:3; }
+    ]]></style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="1080" height="1920"/>
+
+  <!-- GROUP 1: Hero (0s - 2.5s) -->
+  <g id="g1">
+    <!-- table area -->
+    <rect class="table" y="1200" width="1080" height="720"/>
+    <!-- package panel -->
+    <g transform="translate(140,680)">
+      <rect class="panel" x="0" y="0" width="800" height="560" rx="28" ry="28"/>
+      <!-- subtle texture lines -->
+      <g opacity="0.05" stroke="#000" stroke-width="8">
+        <path d="M20 40 Q200 60 400 40 T780 40" fill="none"/>
+      </g>
+      <!-- logo rectangle on package -->
+      <rect x="300" y="80" width="200" height="120" rx="12" fill="#9AA57A"/>
+      <text x="400" y="155" class="logo-text" font-size="48" text-anchor="middle">品牌</text>
+    </g>
+    <!-- headline -->
+    <text x="540" y="580" class="title" font-size="72" text-anchor="middle">新品上市 · 柔润呵护</text>
+
+    <!-- Hero animation: fade in/out + gentle rotate/dolly -->
+    <animate href="#g1" attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.88;1" dur="2.5s" begin="0s" fill="freeze"/>
+    <animateTransform href="#g1" attributeName="transform" attributeType="XML" type="translate" from="0 0" to="0 -8" dur="2.5s" begin="0s" fill="freeze" />
+    <animateTransform href="#g1" attributeName="transform" attributeType="XML" type="rotate" from="-6 540 960" to="6 540 960" dur="2.5s" begin="0s" additive="sum" repeatCount="1" fill="freeze"/>
+  </g>
+
+  <!-- GROUP 2: Macro (2.5s - 5.5s) -->
+  <g id="g2" opacity="0">
+    <g transform="translate(140,520)">
+      <rect x="0" y="0" width="800" height="840" rx="16" fill="#FFFFFF" stroke="#E6D8C8" stroke-width="3"/>
+      <!-- fiber lines -->
+      <g stroke="#EDE7E0" stroke-width="2" opacity="0.7">
+        <path d="M10 60 Q100 80 200 60 T790 60" fill="none"/>
+        <path d="M10 120 Q120 140 240 120 T790 120" fill="none"/>
+        <path d="M10 180 Q140 200 280 180 T790 180" fill="none"/>
+      </g>
+      <!-- droplet -->
+      <circle id="drop" cx="520" cy="380" r="46" fill="#B58B61" opacity="0.95"/>
+      <ellipse cx="520" cy="430" rx="120" ry="20" fill="#F4E6D9" opacity="0.5"/>
+    </g>
+    <text x="540" y="1500" class="subtitle" font-size="64" text-anchor="middle">瞬吸不渗 · 细腻柔软</text>
+
+    <!-- Macro animation: fade in/out, droplet pulse -->
+    <animate href="#g2" attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.88;1" dur="3s" begin="2.5s" fill="freeze"/>
+    <animateTransform href="#g2" attributeName="transform" attributeType="XML" type="scale" from="1 1" to="1.02 1.02" dur="3s" begin="2.5s" fill="freeze"/>
+    <animate href="#drop" attributeName="r" values="46;52;46" dur="0.8s" begin="3s" repeatCount="3" />
+    <animate href="#drop" attributeName="opacity" values="0.95;0.6;0.95" dur="0.8s" begin="3s" repeatCount="3"/>
+  </g>
+
+  <!-- GROUP 3: Lifestyle (5.5s - 8.5s) -->
+  <g id="g3" opacity="0">
+    <!-- window -->
+    <rect x="60" y="60" width="960" height="600" fill="#FFF9F2" />
+    <!-- table -->
+    <rect y="1100" width="1080" height="820" fill="#F0E3D8"/>
+    <!-- silhouette person wiping -->
+    <g transform="translate(200,800)" fill="#D9C9B7">
+      <ellipse cx="200" cy="220" rx="140" ry="80" />
+      <rect x="60" y="260" width="280" height="180" rx="20"/>
+    </g>
+    <!-- small napkin pack on table with subtle logo -->
+    <g transform="translate(720,1280)">
+      <rect x="0" y="0" width="160" height="110" rx="12" fill="#FFFFFF" stroke="#E6D8C8"/>
+      <text x="80" y="65" font-size="22" fill="#9AA57A" text-anchor="middle">品牌</text>
+    </g>
+    <text x="540" y="1700" class="subtitle" font-size="56" text-anchor="middle">安心陪伴每一餐</text>
+
+    <!-- Lifestyle animation: fade in/out + subtle handheld -->
+    <animate href="#g3" attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.88;1" dur="3s" begin="5.5s" fill="freeze"/>
+    <animateTransform href="#g3" attributeName="transform" attributeType="XML" type="translate" from="0 0" to="0 -6" dur="3s" begin="5.5s" fill="freeze"/>
+  </g>
+
+  <!-- GROUP 4: CTA (8.5s - 10s) -->
+  <g id="g4" opacity="0">
+    <g transform="translate(140,420)">
+      <rect x="0" y="0" width="800" height="1000" rx="28" ry="28" fill="#FFFFFF" stroke="#E6D8C8"/>
+      <text x="400" y="200" font-size="72" text-anchor="middle" fill="#5A4A3E" font-family="Helvetica, Arial, sans-serif">品牌</text>
+      <text x="400" y="360" font-size="48" text-anchor="middle" fill="#9AA57A" font-family="Helvetica, Arial, sans-serif">扫码购买</text>
+      <!-- QR placeholder -->
+      <rect class="qr" x="580" y="700" width="160" height="160" rx="8" ry="8"/>
+      <text x="660" y="795" font-size="20" text-anchor="middle" fill="#666666">二维码</text>
+    </g>
+    <text x="540" y="1850" class="cta" font-size="44" text-anchor="middle">扫码立即购买 ▶️</text>
+
+    <!-- CTA animation: fade in + slight pop -->
+    <animate href="#g4" attributeName="opacity" values="0;1;1" keyTimes="0;0.18;1" dur="1.5s" begin="8.5s" fill="freeze"/>
+    <animateTransform href="#g4" attributeName="transform" attributeType="XML" type="scale" from="0.96 0.96" to="1 1" dur="0.6s" begin="8.6s" fill="freeze"/>
+  </g>
+
+  <!-- Bottom persistent progress indicator (thin) -->
+  <rect x="80" y="1900" width="920" height="8" rx="4" fill="#EDE7E0"/>
+  <rect id="prog" x="80" y="1900" width="0" height="8" rx="4" fill="#9AA57A">
+    <animate attributeName="width" from="0" to="920" dur="10s" begin="0s" fill="freeze"/>
+  </rect>
+
+  <!-- Subtitles overlay (for accessibility) - also mirrored by group text but centralized for clarity -->
+  <!-- (optional: duplicated) -->
+
+</svg>
